@@ -39,3 +39,11 @@ let dias = Math.floor(horas / 24);
  
  return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
 }
+unction atualizaCronometro(){
+    for (let i = 0; i < contadores.length; i++) {
+    contadores[i].textContent = calculaTempo(tempos[i]);
+   }
+   
+}
+atualizaCronometro();
+setInterval(atualizaCronometro, 1000);
